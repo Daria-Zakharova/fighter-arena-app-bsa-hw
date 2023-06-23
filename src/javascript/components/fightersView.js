@@ -1,4 +1,5 @@
 import createElement from '../helpers/domHelper';
+// eslint-disable-next-line import/no-cycle
 import { createFightersSelector } from './fighterSelector';
 
 function createImage(fighter) {

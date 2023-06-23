@@ -10,7 +10,7 @@ function hideModal() {
 
 function createHeader(title, onClose) {
     const headerElement = createElement({ tagName: 'div', className: 'modal-header' });
-    const titleElement = createElement({ tagName: 'span' });
+    const titleElement = createElement({ tagName: 'div', className: 'modal-header___txt' });
     const closeButton = createElement({ tagName: 'div', className: 'close-btn' });
 
     titleElement.innerText = title;

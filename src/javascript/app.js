@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import createFighters from './components/fightersView';
 import fighterService from './services/fightersService';
 

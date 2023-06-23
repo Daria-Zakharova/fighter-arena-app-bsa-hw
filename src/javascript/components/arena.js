@@ -1,5 +1,8 @@
 import createElement from '../helpers/domHelper';
+import { fight } from './fight';
 import { createFighterImage } from './fighterPreview';
+// eslint-disable-next-line import/no-cycle
+import showWinnerModal from './modal/winner';
 
 function createFighter(fighter, position) {
     const imgElement = createFighterImage(fighter);
@@ -65,7 +68,9 @@ export default function renderArena(selectedFighters) {
 
     root.innerHTML = '';
     root.append(arena);
-
+    fight(...selectedFighters)
+        .then(showWinnerModal)
+        .catch(console.error);
     // todo:
     // - start the fight
     // - when fight is finished show winner

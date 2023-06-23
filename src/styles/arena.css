@@ -22,6 +22,7 @@
 
 .arena___fighter img {
   height: 480px;
+  transition: transform 350ms;
 }
 
 .arena___fight-status {
@@ -47,6 +48,14 @@
   margin: 0 30px;
 }
 
+#left-fighter-indicator {
+transform-origin: left;
+}
+
+#right-fighter-indicator {
+  transform-origin: right;
+  }
+
 .arena___health-indicator {
   width: 100%;
   height: 25px;
@@ -60,4 +69,5 @@
   height: 100%;
   width: 100%;
   background-color: #ebd759;
+  transition: transform 350ms, color 350ms;
 }
